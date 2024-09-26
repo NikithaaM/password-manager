@@ -1,0 +1,93 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    position: relative; /* Ensures the hamburger menu aligns properly */
+    
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 200px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: fixed; /* Keeps the sidebar fixed on the left side */
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .sidebar.hidden {
+    transform: translateX(-250px);
+  }
+  
+  .sidebar.visible {
+    transform: translateX(0);
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px; /* Added margin to ensure it doesn't overlap with the hamburger menu */
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .sidebar ul li a:hover {
+    color: #1a73e8;
+  }
+  
+  /* Dashboard Content */
+  .dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-left: 60px; /* Adjust this margin when sidebar is hidden */
+    margin-top: 60px; /* Ensure content doesn't overlap with the hamburger menu */
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+  }
+  
